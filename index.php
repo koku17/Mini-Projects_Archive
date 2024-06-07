@@ -18,11 +18,11 @@
 		</center>
 			<?php
 				if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["math-prompt"] != null){
-					echo "<center><h1> Result </h1></center>";
 					$prompt=$_POST["math-prompt"];
-					echo "<p> Prompt : <span class=\"code\"> $prompt </span></p>";
-					$output=shell_exec("qalc -t '$prompt'");
-					echo "<center><div class=\"result\"> $output </div></center>";
+					print "<span class=\"prompt-text\"> Request : </span><span class=\"prompt-show\"> $prompt </span>";
+					echo "<center><h1> Result </h1></center>";
+					$output=shell_exec("qalc '$prompt' | sed 's/$/ <br>/g;s/≈/ <br>≈/g;'");
+					echo "<center><div class=\"divbg\"><div class=\"result\">$output</div></div></center>";
 				}
 			?>
 	</div>

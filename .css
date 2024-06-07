@@ -17,6 +17,7 @@ body {
   height: 3em;
   border: none;
   border-radius: 10px;
+  border: 2px solid rgba(255,255,255,.5);
   font-family:monospace;
   font: Fantasque Sans Mono;
   font-weight: bold;
@@ -37,7 +38,6 @@ body {
 
 .prompt-input{
   padding: 10px;
-  border-radius: 5px;
 }
 
 .prompt-button:hover {
@@ -49,15 +49,14 @@ body {
 }
 
 .result {
-  width:75%;
+  display: inline-flex;
   color: rgba(255,255,255,.5);
-  background: rgba(38,38,38,1);
-  padding: 10px;
-  border-radius: 10px;
+  background: none;
   font-family: monospace;
   font: Fantasque Sans Mono;
   font-weight: bold;
   font-size: 14px;
+  text-align: left;
 }
 
 .code {
@@ -69,6 +68,30 @@ body {
   background-color: rgba(38,38,38,.8);
 }
 
+.prompt-show {
+  font-family: monospace;
+  font: Fantasque Sans Mono;
+  font-weight: bold;
+  background: rgba(38,38,38,.5);
+  padding: 2px 4px;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 5px;
+  background-color: rgba(38,38,38,.8);
+  font-size: 16px;
+}
+
+.prompt-text {
+  font-size: 20px;
+}
+
 li {
   padding: 5px;
+}
+
+.divbg {
+  width: 75%;
+  background: rgba(38,38,38,1);
+  padding: 10px;
+  border: 2px solid rgba(255,255,255,.5);
+  border-radius: 10px;
 }
