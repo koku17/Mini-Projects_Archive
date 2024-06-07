@@ -1,0 +1,311 @@
+\documentclass{article}
+
+%!TEX program=xelatex
+
+% programs
+\usepackage[margin=.5in]{geometry}
+\usepackage{minted}
+\usepackage{enumitem}
+\usepackage{fontspec}
+
+% detailes
+\author{Manvith, Shreyas, Ashwin G Rao, Karthik Wagle}
+\date{June 8, 2024}
+\title{Qualculate Web}
+
+% macro
+\newcommand{\code}[1]{
+	{\fontspec{Fantasque Sans Mono} #1}
+}
+\begin{document}
+	\maketitle \newpage
+	\section{Introduction}
+	\par Qalculate! is a multi-purpose cross-platform desktop calculator, But It's functionalities are mostly limited to offline. It is one of the most powerful calculators which calculate almost any problem. To use this on a web interface we are using php. PHP has good support for server side scripting using which applicatons are ran on web.
+
+	\par The Basic versions of Qalculate have command line interface, gtk and qt versions for GUI. For web we are usig commandline and gtk versions for displaying graphs and getting results.
+
+	\section{Supported Unit Lists}
+	\begin{enumerate}[label=\alph*) ]
+		\item Angle
+		\begin{itemize}
+			\item Plane Angle
+			\item Solid Angle
+		\end{itemize}
+		\item Area
+		\begin{itemize}
+			\item Currency Electricity
+			\item Capacitance
+			\item Electric Charge
+			\item Electric Conductance
+			\item Electric Current
+			\item Electric Dipole Moment
+			\item Electric Potential
+			\item Electric Resistance
+			\item Electrical Elastance
+			\item Inductance
+		\end{itemize}
+		\item Energy
+		\begin{itemize}
+			\item Action
+			\item Entropy
+			\item Power
+		\end{itemize}
+		\item Force
+		\begin{itemize}
+			\item Dynamic Viscosity
+			\item Kinematic Viscosity
+			\item Pressure
+		\end{itemize}
+		\item Information
+		\item Length Light
+		\begin{itemize}
+			\item Illuminance
+			\item Luminance
+			\item Luminous Flux
+			\item Luminous Intensity
+		\end{itemize}
+		\item Magnetism
+		\begin{itemize}
+			\item Magnetic Field Strength
+			\item Magnetic Flux
+			\item Magnetic Flux Density
+		\end{itemize}
+		\item Mass Radioactivity
+		\begin{itemize}
+			\item Absorbed Dose
+			\item Dose Equivalent Exposure
+		\end{itemize}
+		\item Ratio Speed
+		\begin{itemize}
+			\item Acceleration
+		\end{itemize}
+		\item Substance
+		\begin{itemize}
+			\item Catalytic Activity
+		\end{itemize}
+		\item Temperature Time
+		\begin{itemize}
+			\item Frequency
+		\end{itemize}
+		\item Typography Volume
+		\begin{itemize}
+			\item Cooking
+			\item Fuel Economy
+			\item Imperial Capacity
+			\item U.S. Capacity
+			\item Volumetric Flow Rate
+		\end{itemize}
+	\end{enumerate}
+
+	\section{Capabilities}
+	\begin{enumerate}[label=\alph*) ]
+		\item Algebra
+		\item Bitwiser Operatioans
+		\item Calculus
+		\item Combinatorics
+		\item Complex Numbers
+		\item Currency Conversion
+		\item Data sets
+		\item Date and Time
+		\item Economics
+		\item Geometry
+		\begin{itemize}
+			\item Circle
+			\item Cone
+			\item Cube
+			\item Cylinder
+			\item Parallelogram
+			\item Prism
+			\item Pyramid
+			\item Rectangle
+			\item Sphere
+			\item Square
+			\item Trapezoid
+			\item Triangle
+		\end{itemize}
+		\item Logical Operations
+		\item Matrices and Vectors
+		\item Number Conversions
+		\begin{itemize}
+			\item Arithmetic
+			\item Integers
+			\item Number Bases
+			\item Polynomials
+			\item Prime Numbers
+			\item Rounding
+		\end{itemize}
+		\item Plotting a function
+		\item Plotting Graphs
+		\item Relational Operations
+		\item Statistics
+		\begin{itemize}
+			\item Correlation
+			\item Descriptive Statistics
+			\item Distribution
+			\item Means
+			\item Moments
+			\item Random Numbers
+			\item Regression
+			\item Statistical Tests
+		\end{itemize}
+		\item Trignometry
+		\item Unit Conversions
+	\end{enumerate} \newpage
+
+	\section*{Example}
+	\begin{enumerate}[label=\alph*) ]
+		\item Basic functions and operators
+		\begin{itemize}
+			\item \code{sqrt 4 = sqrt(4) = 4\textasciicircum(0.5) = 4\textasciicircum(1/2) = 2}
+			\item \code{sqrt(25; 16; 9; 4) = [5  4  3  2]}
+			\item \code{sqrt(32) = 4 × $\surd$(2) (in exact mode)}
+			\item \code{cbrt(-27) = root(-27; 3) = -3 (real root)}
+			\item \code{(-27)\textasciicircum(1/3) $\approx$ 1.5 + 2.5980762i (principal root)}
+			\item \code{ln 25 = log(25; e) $\approx$ 3.2188758}
+			\item \code{log2(4)/log10(100) = log(4; 2)/log(100; 10) = 1}
+			\item \code{5! = 1 × 2 × 3 × 4 × 5 = 120}
+			\item \code{5\textbackslash2 = 5//2 = trunc(5 / 2) = 2 (integer division)}
+			\item \code{5 mod 3 = mod(5; 3) = 2}
+			\item \code{52 to factors = 2\textasciicircum2 × 13}
+			\item \code{25/4 × 3/5 to fraction = 3 + 3/4}
+			\item \code{gcd(63; 27) = 9}
+			\item \code{sin(pi/2) - cos(pi) = sin(90 deg) - cos(180 deg) = 2}
+			\item \code{sum(x; 1; 5) = 1 + 2 + 3 + 4 + 5 = 15}
+			\item \code{sum(\textbackslash i\textasciicircum2+sin(\textbackslash i); 1; 5; \textbackslash i) = 1\textasciicircum2 + sin(1) + 2\textasciicircum2 + sin(2) + ... $\approx$ 55.176162}
+			\item \code{product(x; 1; 5) = 1 × 2 × 3 × 4 × 5 = 120}
+			\item \code{var1:=5 (stores value 5 in variable var1)}
+			\item \code{var1 × 2 = 10}
+			\item \code{5\textasciicircum2 \#this is a comment = 25}
+			\item \code{sinh(0.5) where sinh()=cosh() = cosh(0.5) $\approx$ 1.1276260}
+			\item \code{plot(x\textasciicircum2; -5; 5) (plots the function y=x\textasciicircum2 from -5 to 5)}
+		\end{itemize}
+
+		\item Units
+		\begin{itemize}
+			\item \code{5 dm3 to L = 5 dm\textasciicircum3 to L = 5 L}
+			\item \code{20 miles / 2h to km/h = 16.09344 km/h}
+			\item \code{1.74 to ft = 1.74 m to ft $\approx$ 5 ft + 8.5039370 in}
+			\item \code{1.74 m to -ft $\approx$ 5.7086614 ft}
+			\item \code{100 lbf × 60 mph to hp $\approx$ 16 hp}
+			\item \code{50 Ω × 2 A = 100 V}
+			\item \code{50 Ω × 2 A to base = 100 kg·m²/(s³·A)}
+			\item \code{10 N / 5 Pa = (10 N)/(5 Pa) = 2 m²}
+			\item \code{5 m/s to s/m = 0.2 s/m}
+			\item \code{500 € - 20\% to \$ $\approx$ \$451.04}
+			\item \code{500 megabit/s × 2 h to b?byte $\approx$ 419.09516 gibibytes}
+		\end{itemize}
+
+		\item Physical constants
+		\begin{itemize}
+			\item \code{k\_e / G × a\_0 = (coulombs\_constant / newtonian\_constant) × bohr\_radius $\approx$ 7.126e9 kg·H·m\textasciicircum-1}
+			\item \code{$h$ / (λ\_C × c) = planck / (compton\_wavelength × speed\_of\_light) $\approx$ 9.1093837e-31 kg}
+			\item \code{5 ns × rydberg to c $\approx$ 6.0793194E-8c}
+			\item \code{atom(Hg; weight) + atom(C; weight) × 4 to g $\approx$ 4.129e-22 g}
+			\item \code{(G × planet(earth; mass) × planet(mars; mass))/(54.6e6 km)\textasciicircum2 $\approx$ 8.58e16 N (gravitational attraction between earth and mars)}
+		\end{itemize} \newpage
+
+		\item Uncertainty and interval arithmetic
+		\begin{itemize}
+			\item \code{sin(5±0.2)\textasciicircum2/2±0.3 $\approx$ 0.460±0.088 (0.46±0.12)}
+			\item \code{(2±0.02 J)/(523±5 W) $\approx$ 3.824±0.053 ms (3.825±0.075 ms)}
+			\item \code{interval(-2; 5)\textasciicircum2 $\approx$ intervall(-8.2500000; 12.750000) (intervall(0; 25))}
+		\end{itemize}
+
+		\item Algebra
+		\begin{itemize}
+			\item \code{(5x\textasciicircum2 + 2)/(x - 3) = 5x + 15 + 47/(x - 3)}
+			\item \code{(\textbackslash a + \textbackslash b)(\textbackslash a - \textbackslash b) = ("a" + "b")("a" - "b") = 'a'\textasciicircum2 - 'b'\textasciicircum2}
+			\item \code{(x + 2)(x - 3)\textasciicircum3 = x\textasciicircum4 - 7x\textasciicircum3 + 9x\textasciicircum2 + 27x - 54}
+			\item \code{factorize x\textasciicircum4 - 7x\textasciicircum3 + 9x\textasciicircum2 + 27x - 54 = x\textasciicircum4 - 7x\textasciicircum3 + 9x\textasciicircum2 + 27x - 54 to factors = (x + 2)(x - 3)\textasciicircum3}
+			\item \code{cos(x)+3y\textasciicircum2 where x=pi and y=2 = 11}
+			\item \code{gcd(25x; 5x\textasciicircum2) = 5x}
+			\item \code{1/(x\textasciicircum2+2x-3) to partial fraction = 1/(4x - 4) - 1/(4x + 12)}
+			\item \code{x+x\textasciicircum2+4 = 16}
+			\code{= x = 3 or x = -4}
+
+			\item \code{x\textasciicircum2/(5 m) - hypot(x; 4 m) = 2 m where x>0}
+			\code{x $\approx$ 7.1340411 m}
+
+			\item \code{cylinder(20cm; x) = 20L (calculates the height of a 20 L cylinder with radius of 20 cm)}
+			\code{= x = (1 / (2π)) m}
+			\code{= x $\approx$ 16 cm}
+
+			\item \code{asin(sqrt(x)) = 0.2}
+			\code{= x = sin(0.2)\textasciicircum2}
+			\code{= x $\approx$ 0.039469503}
+
+			\item \code{x\textasciicircum2 > 25x}
+			\code{= x > 25 or x < 0}
+
+			\item \code{solve(x = y+ln(y); y) = lambertw(e\textasciicircum x)}
+			\item \code{solve2(5x=2y\textasciicircum2; sqrt(y)=2; x; y) = 32/5}
+			\item \code{multisolve([5x=2y+32, y=2z, z=2x]; [x, y, z]) = [-32/3  -128/3  -64/3]}
+			\item \code{dsolve(diff(y; x) - 2y = 4x; 5) = 6e\textasciicircum(2x) - 2x - 1}
+		\end{itemize}
+
+		\item Calculus
+		\begin{itemize}
+			\item \code{diff(6x\textasciicircum2) = 12x}
+			\item \code{diff(sinh(x\textasciicircum2)/(5x) + 3xy/sqrt(x)) = (2/5) × cosh(x\textasciicircum2) - sinh(x\textasciicircum2)/(5x\textasciicircum2) + (3y)/(2 × $\surd$(x))}
+			\item \code{integrate(6x\textasciicircum2) = 2x\textasciicircum3 + C}
+			\item \code{integrate(6x\textasciicircum2; 1; 5) = 248}
+			\item \code{integrate(sinh(x\textasciicircum2)/(5x) + 3xy/sqrt(x)) = 2x × $\surd$(x) × y + Shi(x\textasciicircum2) / 10 + C}
+			\item \code{integrate(sinh(x\textasciicircum2)/(5x) + 3xy/sqrt(x); 1; 2) $\approx$ 3.6568542y + 0.87600760}
+			\item \code{limit(ln(1 + 4x)/(3\textasciicircum x - 1); 0) = 4 / ln(3)}
+		\end{itemize}
+
+		\item Matrices and vectors
+		\begin{itemize}
+			\item \code{{}[1, 2, 3; 4, 5, 6] = ((1; 2; 3); (4; 5; 6)) = [1  2  3; 4  5  6] (2×3 matrix)}
+			\item \code{1...5 = (1:5) = (1:1:5) = [1  2  3  4  5]}
+			\item \code{(1; 2; 3) × 2 - 2 = [(1 × 2 - 2), (2 × 2 - 2), (3 × 2 - 2)] = [0  2  4]}
+			\item \code{{}[1 2 3].[4 5 6] = dot([1 2 3]; [4 5 6]) = 32 (dot product)}
+			\item \code{cross([1 2 3]; [4 5 6]) = [-3  6  -3] (cross product)}
+			\item \code{{}[1 2 3; 4 5 6].×[7 8 9; 10 11 12] = hadamard([1 2 3; 4 5 6]; [7 8 9; 10 11 12]) = [7  16  27; 40  55  72] (hadamard product)}
+			\item \code{{}[1 2 3; 4 5 6] × [7 8; 9 10; 11 12] = [58  64; 139  154] (matrix multiplication)}
+			\item \code{{}[1 2; 3 4]\textasciicircum-1 = inverse([1 2; 3 4]) = [-2  1; 1.5  -0.5]}
+		\end{itemize} \newpage
+
+		\item Statistics
+		\begin{itemize}
+			\item \code{mean(5; 6; 4; 2; 3; 7) = 4.5}
+			\item \code{stdev(5; 6; 4; 2; 3; 7) $\approx$ 1.87}
+			\item \code{quartile([5 6 4 2 3 7]; 1) = percentile((5; 6; 4; 2; 3; 7); 25) $\approx$ 2.9166667}
+			\item \code{normdist(7; 5) $\approx$ 0.053990967}
+			\item \code{spearman(column(load(test.csv); 1); column(load(test.csv); 2)) $\approx$ -0.33737388 (depends on the data in the CSV file)}
+		\end{itemize}
+
+		\item Time and date
+		\begin{itemize}
+			\item \code{10:31 + 8:30 to time = 19:01}
+			\item \code{10h 31min + 8h 30min to time = 19:01}
+			\item \code{now to utc = "2020-07-10T07:50:40Z"}
+			\item \code{"2020-07-10T07:50CET" to utc+8 = "2020-07-10T14:50:00+08:00"}
+			\item \code{"2020-05-20" + 523d = addDays(2020-05-20; 523) = "2021-10-25"}
+			\item \code{today - 5 days = "2020-07-05"}
+			\item \code{"2020-10-05" - today = days(today; 2020-10-05) = 87 d}
+			\item \code{timestamp(2020-05-20) = 1 589 925 600}
+			\item \code{stamptodate(1 589 925 600) = "2020-05-20T00:00:00"}
+			\item \code{"2020-05-20" to calendars (returns date in Hebrew, Islamic, Persian, Indian, Chinese, Julian, Coptic, and Ethiopian calendars)}
+		\end{itemize}
+
+		\item Number bases
+		\begin{itemize}
+			\item \code{52 to bin = 0011 0100}
+			\item \code{52 to bin16 = 0000 0000 0011 0100}
+			\item \code{52 to oct = 064}
+			\item \code{52 to hex = 0x34}
+			\item \code{0x34 = hex(34) = base(34; 16) = 52}
+			\item \code{523<<2\&250 to bin = 0010 1000}
+			\item \code{52.345 to float $\approx$ 0100 0010 0101 0001 0110 0001 0100 1000}
+			\item \code{float(01000010010100010110000101001000) = 1715241/32768 $\approx$ 52.345001}
+			\item \code{floatError(52.345) $\approx$ 1.2207031e-6}
+			\item \code{52.34 to sexa = 52°20$'$24$''$}
+			\item \code{1978 to roman = MCMLXXVIII}
+			\item \code{52 to base 32 = 1K}
+			\item \code{sqrt(32) to base sqrt(2) $\approx$ 100000}
+			\item \code{0xD8 to unicode = Ø}
+			\item \code{code(Ø) to hex = 0xD8}
+		\end{itemize}
+	\end{enumerate}
+\end{document}
