@@ -63,7 +63,7 @@ body {
 .code {
   font-family: monospace;
   font: Fantasque Sans Mono;
-  background: rgba(38,38,38,1);
+  background: rgba(38,38,38,.5);
   padding: 0px 4px;
   border-radius: 5px;
   background-color: rgba(38,38,38,.8);
